@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from pystyle import Box
 import random
 import requests
 from time import sleep
@@ -10,6 +11,8 @@ from rich.text import Text
 from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
+from pystyle import Center
+import datetime
 
 from hadjimedia import HadjiMedia
 
@@ -38,7 +41,7 @@ def gradient_text(text, colors):
     return colorful_text
 
 def banner(console):
-    os.system('cls' if os.name == 'nt' else 'clear')    
+    os.system('cls' if os.name == 'nt' else 'clear')
     brand_name =  "                ╔╗─╔╗────╔╗╔════╗────╔╗╔══╗───╔╗\n"
     brand_name += "                ║║─║║────║╠╣╔╗╔╗║────║║║╔╗║──╔╝╚╗\n"
     brand_name += "                ║╚═╝╠══╦═╝╠╬╣║║╠╩═╦══╣║║╚╝╚╦═╩╗╔╝\n"
@@ -141,7 +144,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = OfficialGoodShit(acc_access_key)
+        cpm = HadjiMedia(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
