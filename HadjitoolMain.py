@@ -11,7 +11,7 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from hadjimedia import HadjiMedia
+from HadjiMedia import Hadjimedia
 
 __CHANNEL_USERNAME__ = "HadjiOfficialChannel"
 __GROUP_USERNAME__   = "HadjiDiscussion"
