@@ -1,6 +1,6 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://Godgs.squareweb.app/api"
+__ENDPOINT_URL__: str = "https://hadjimediacpm.squareweb.app/api"
 
 class HadjiMedia:
     def __init__(self, access_key) -> None:
